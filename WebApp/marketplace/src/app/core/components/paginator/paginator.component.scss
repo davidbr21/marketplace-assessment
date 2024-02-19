@@ -1,0 +1,34 @@
+.paginator{
+    display:flex;
+    justify-content: center;
+    .page-button{
+        width: 2.3rem;
+        height: 2.3rem;
+        align-items: center;
+        border: 1px solid #c7c7c7;
+        border-right: 0;
+        display:flex;
+        justify-content: center;
+        color: var(--primary-color);
+        user-select: none;
+        cursor: pointer;
+        span{
+            align-self: center;
+        }
+    }
+    .page-button:first-child{
+        border-radius: 0.3rem 0 0 0.3rem;
+    }
+    .page-button:last-child{
+        border-right: 1px solid #c7c7c7;
+        border-radius: 0 0.3rem 0.3rem 0;
+    }
+    .page-button:hover:not(.blocked-page), .current-page{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .blocked-page{
+        color:#c7c7c7;
+        cursor: not-allowed;
+    }
+}

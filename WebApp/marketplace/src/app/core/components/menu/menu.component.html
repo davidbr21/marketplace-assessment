@@ -1,0 +1,32 @@
+<div class="menu">
+    <div class="menu-wrapper">
+        <h2>ROSEN Marketplace</h2>
+        <ul>
+            <li [routerLink]="['/list']">List</li>
+            <li *ngIf="user" [routerLink]="['/post-new']">Post New</li>
+            <li *ngIf="user">
+                <ul>
+                    <li>Hello, {{user.username}}</li>
+                    <li *ngIf="user" (click)="logout()">Log out</li>
+                </ul>
+            </li>
+            <li *ngIf="!user"><ul>
+                <li [routerLink]="['/login']">Login</li>
+                <li [routerLink]="['/signup']">Sign Up</li>
+            </ul></li>
+
+        </ul>
+        <img (click)="openMobile=!openMobile" src="assets/hamburguer-icon.svg">        
+    </div>
+    <div *ngIf="openMobile" class="mobile-menu-container">
+        <ul class="mobile-menu">
+            <li *ngIf="user" style="font-weight: 600;">Hello, {{user.username}}</li>
+            <li [routerLink]="['/list']">List</li>
+            <li *ngIf="user" [routerLink]="['/post-new']">Post New</li>
+            <li *ngIf="user" (click)="logout()">Log out</li>
+            <li *ngIf="!user" [routerLink]="['/login']">Login</li>
+            <li *ngIf="!user" [routerLink]="['/signup']">Sign Up</li>
+        
+        </ul>
+    </div>
+</div>

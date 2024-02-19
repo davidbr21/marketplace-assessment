@@ -1,0 +1,107 @@
+.card{
+    width: 100%;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    min-height: 420px;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    .picture{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        display: flex; //Centers image
+        justify-content: center; //Centers image
+        overflow: hidden;
+        img{
+            max-height: 400px;
+            object-fit: contain;
+        }
+    }
+
+    .title-wrapper{
+        padding: 1rem;
+        .title{
+            padding: 0.5rem 0.5rem;
+            background-color: var(--dark-color);
+            margin-top: 1rem;
+            color: #fff;
+            font-weight: 400;
+            display: inline;
+            line-height: 2.5rem;
+        }
+    }
+
+    .body{
+        background-color: #fff;
+        margin-top: auto;
+        padding: 1rem 1rem 2rem 1rem;
+        border-radius:0 0 0.5rem 0.5rem;
+        .description{
+            margin: 0;
+        }
+        .byline{
+            font-style: italic;
+            color:#8f8f8f
+        }
+        .category{
+            position: absolute;
+            border:1px solid rgb(1, 101, 102);
+            background-color: rgb(1, 101, 102);
+            display: inline;
+            padding: 0.3rem 1.2rem;
+            float: right;
+            color: #fff;
+            border-radius:0 0 0.5rem 0;
+            bottom: 0;
+            right: 0;
+            
+        }
+    }
+}
+
+.card-md{
+    max-width: 100%;
+    min-height: 420px;
+    .picture {
+        img {
+            max-height: 400px;
+        }
+    } 
+}
+
+.card-xl{
+    max-width: 100%;
+    min-height: 480px;
+    .picture {
+        img {
+            max-height: 480px;
+        }
+    } 
+}
+
+@media (max-width: 992px) {
+    .card-xl, .card-md{
+        min-height: 400px;
+        .picture {
+            img {
+                max-height: 400px;
+            }
+        } 
+    }
+}
+
+@media (max-width: 768px) {
+    .card-xl, .card-md{
+        min-height: 360px;
+        .picture {
+            img {
+                max-height: 360px;
+            }
+        } 
+    }
+}
+

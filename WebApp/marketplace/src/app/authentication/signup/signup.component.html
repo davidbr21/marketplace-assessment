@@ -1,0 +1,8 @@
+<form [formGroup]="signUpForm" (submit)="signUp()">
+  <h3>Sign Up</h3>
+  <div class="form-group">
+    <label for="username">User</label>
+    <input id="username" formControlName="username" placeholder="User Name"/>
+  </div>
+  <button type="submit" class="btn primary-btn offer-submit-button">Register</button>
+</form>

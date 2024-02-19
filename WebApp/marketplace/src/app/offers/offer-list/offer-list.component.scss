@@ -1,0 +1,35 @@
+.loading{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.offers-container{
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+
+    app-offer-item:first-child{
+        grid-column: 1/-1;
+    }
+}
+
+.offers-paginator {
+    margin: 1rem auto;
+    max-width: calc(100vw - 1rem);
+}
+
+@media (max-width: 992px) {
+    .offers-container{
+        // grid-template-columns: repeat(2, 1fr);
+        app-offer-item:first-child{
+            grid-column: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

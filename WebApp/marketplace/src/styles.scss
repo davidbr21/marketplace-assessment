@@ -1,0 +1,73 @@
+//#region colors
+:root {
+    --primary-color: #4071b1;
+    --primary-color-hover: #3262a1;
+    --dark-color: #2e2e2e;
+    --border-color: #c7c7c7;
+}
+//#endregion
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.form-group {
+    display:block;
+    margin-bottom: 1rem;
+    width: 100%;
+    label{
+        font-weight: 600;
+    }
+    input, textarea, select{
+        display: block;
+        border: 1px solid var(--border-color);
+        border-radius: 0.25rem;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        box-sizing: border-box;
+        margin-top: 0.2rem;
+    }
+
+    input, select{
+        height: calc(2.25rem + 2px);
+    }
+
+    textarea{
+        resize: vertical;
+        min-height: 100px;
+        max-height: 240px;
+    }
+
+    input:focus, textarea:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+}
+
+.btn{
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-color-hover);
+}

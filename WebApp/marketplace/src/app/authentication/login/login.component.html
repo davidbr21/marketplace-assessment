@@ -1,0 +1,8 @@
+<form [formGroup]="loginForm" class="offer-form" (submit)="login()">
+  <h3>Login</h3>
+  <div class="form-group">
+    <label for="username">User</label>
+    <input id="username" formControlName="username" placeholder="username"/>
+  </div>
+  <button type="submit" class="btn primary-btn offer-submit-button">Log In</button>
+</form>

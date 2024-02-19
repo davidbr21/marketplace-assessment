@@ -1,0 +1,17 @@
+.main-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "top-bar" "outlet" "content";
+}
+
+.outlet-wrapper{
+  padding: 0.5rem 8rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .outlet-wrapper{
+      padding: 0.5rem;
+  }
+}

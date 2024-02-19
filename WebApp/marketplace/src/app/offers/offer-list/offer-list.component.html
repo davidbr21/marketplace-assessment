@@ -1,0 +1,12 @@
+<div *ngIf="loading" class="loading">LOADING...</div>
+<ng-container *ngIf="pageConfig">
+    <div class="offers-container">
+        <ng-container *ngFor="let off of pageConfig.items; index as i">
+            <app-offer-item [offer]="off" [cardSize]="i == 0 ? 'xl' : 'md'"></app-offer-item>
+        
+        </ng-container>
+    </div>
+    <div class="offers-paginator">
+        <app-paginator (pageChanged)="pageChanged()" [pageConfig]="pageConfig"></app-paginator>
+    </div>
+</ng-container>

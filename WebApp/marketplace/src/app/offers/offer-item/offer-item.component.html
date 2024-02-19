@@ -1,0 +1,16 @@
+<div class="card card-{{cardSize}}">
+  <div class="title-wrapper">
+    <h3 class="title">{{offer.title}}</h3>
+  </div>
+  <div class="picture">
+    <img src="/assets/{{offer.pictureUrl}}" alt="offer-image" />
+  </div>
+  <div class="body">
+    <div class="byline">
+      <span class="user">{{offer.userName}}</span> - 
+      <span class="published-on">{{offer.publishedOn | date: 'dd/MM/YYYY h:mm:ss a'  }}</span>
+    </div>
+    <p class="description">{{offer.description}}</p>
+    <div class="category">{{offer.categoryName}}</div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="paginator" *ngIf="this._pageConfig">
+    <div class="page-button" (click)="switchPage(this._pageConfig.pageIndex-1)" [ngClass]="{'blocked-page': _pageConfig.pageIndex === 0}">&#171;</div>
+    <!-- <div *ngFor="let page of pagesArr | slice: this._pageConfig.pageIndex:this._pageConfig.pageIndex+10; index as i" class="page-button" (click)="switchPage(page, i)" [ngClass]="{'current-page': page === _pageConfig.pageIndex}">
+        {{page+1}}
+    </div> -->
+    <ng-container *ngFor="let page of pagesArr | slice: _pageConfig.getPreviousPageIndexes() : _pageConfig.getNextPageIndexes() ; index as i">
+        <div *ngIf="!(i >= maxButtonsDisplayed)" class="page-button" (click)="switchPage(page)" [ngClass]="{'current-page': page === _pageConfig.pageIndex}">
+            {{page+1}}
+        </div> 
+    </ng-container>
+    <div class="page-button" (click)="switchPage(this._pageConfig.pageIndex+1)" [ngClass]="{'blocked-page': (_pageConfig.pageIndex + 1) === _pageConfig.pageCount}">&#187;</div>
+</div>
